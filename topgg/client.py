@@ -63,7 +63,7 @@ class Client:
 
     self.__own_session = session is None
     self.__session = session or ClientSession(
-      timeout=ClientTimeout(total=MAXIMUM_DELAY_THRESHOLD * 1000.0)
+      timeout=ClientTimeout(total=MAXIMUM_DELAY_THRESHOLD)
     )
     self.__token = token
 
