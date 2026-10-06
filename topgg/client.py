@@ -231,7 +231,7 @@ class Client:
       await self.__request(
         'POST',
         '/projects/@me/announcements',
-        body={'title': title[100:], 'content': content[2000:]},
+        body={'title': title[:100], 'content': content[:2000]},
       )
     )
 
